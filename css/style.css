@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Poppins:wght@400;500&family=Roboto:wght@400;500;700&family=Ubuntu&display=swap");
+@import "mobile_menu.css";
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-image: url("../images/back_img.jpg");
+  background-size: cover;
+  height: 100vh;
+  padding-top: 23px;
+  position: relative;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1170px;
+  margin: auto;
+}
+header .container .burger-menu_nav {
+  all: initial;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+header .container .burger-menu_nav .burger-menu_link {
+  all: initial;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #40A3F8;
+  padding-right: 50px;
+}
+header .container .burger-menu_nav .burger-menu_link:nth-of-type(2) {
+  color: #6E5F5F;
+  opacity: 0.3;
+}
+header .container .burger-menu_nav .burger-menu_link:nth-of-type(3) {
+  color: #6E5F5F;
+  mix-blend-mode: normal;
+  opacity: 0.3;
+}
+header .container .burger-menu_nav .burger-menu_link:nth-of-type(4) {
+  color: #262323;
+  mix-blend-mode: normal;
+  opacity: 0.3;
+  padding-right: 75px;
+}
+header .container .burger-menu_nav .burger-menu_link:nth-of-type(5) {
+  color: #FFFFFF;
+  font-size: 15px;
+  line-height: 22px;
+  background: #40A3F8;
+  border-radius: 5px;
+  padding: 13px 28px;
+}
+header .female-doctor {
+  position: absolute;
+  bottom: -0.5%;
+  right: 7%;
+}
+header .female-doctor img {
+  width: 100vh;
+}
+
+/*# sourceMappingURL=style.css.map */
