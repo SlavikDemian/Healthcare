@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -17,26 +17,59 @@
 <body>
 <header>
     <div class="container">
-        <div>
-        <a href="#"><img src="images/logo-2.svg" alt="logo" class="logo"></a>
+        <div class="container_nav">
+            <div>
+                <a href="#"><img src="images/logo-2.svg" alt="logo" class="logo"></a>
+            </div>
+            <div class="burger-menu">
+                <a href="" class="burger-menu_button">
+                    <spun class="burger-menu_lines"></spun>
+                </a>
+                <nav class="burger-menu_nav">
+                    <a href="#" class="burger-menu_link">Home</a>
+                    <a href="#" class="burger-menu_link">About</a>
+                    <a href="#" class="burger-menu_link">Article</a>
+                    <a href="#" class="burger-menu_link">Services</a>
+                    <a href="#" class="burger-menu_link">Get Started</a>
+                </nav>
+                <div class="burger-menu_overlay"></div>
+            </div>
         </div>
-        <div class="burger-menu">
-            <a href="" class="burger-menu_button">
-                <spun class="burger-menu_lines"></spun>
-            </a>
-            <nav class="burger-menu_nav">
-                <a href="#" class="burger-menu_link">Home</a>
-                <a href="#" class="burger-menu_link">About</a>
-                <a href="#" class="burger-menu_link">Article</a>
-                <a href="#" class="burger-menu_link">Services</a>
-                <a href="#" class="burger-menu_link">Get Started</a>
-            </nav>
-            <div class="burger-menu_overlay"></div>
+        <div class="container_box_text">
+            <h1>Find And Search Your <span>Suitable Doctor’s</span></h1>
+            <p>Join us and take care of yourself and your family with health services that will make you feel confident and safe in your daily life.</p>
+            <form name="find_doctor" action="#" method="post">
+                <div class="form_input_name">
+                    <input type="text" name="name_doctor" placeholder="Find your doctor" class="input_name">
+                </div>
+                <div class="form_select_geo">
+                    <select name="geolocation" autofocus class="select_geo">
+                        <option selected>New York, USA</option>
+                    </select>
+                </div>
+                <button type="submit"><img src="images/button_search.png" alt="search"></button>
+            </form>
         </div>
     </div>
     <div class="female-doctor">
-        <img src="images/female-doctor.png">
+        <img src="images/female-doctor_2.png" alt="female doctor" class="image_female-doctor">
+        <div class="icon_chat">
+            <a href="#"><img src="images/icon_chat.png" alt="chat"></a>
+        </div>
+        <div class="icon_video_chat">
+            <a href="#"><img src="images/icon_video_chat.png" alt="video chat"></a>
+        </div>
+        <div class="icon_telephone">
+            <a href="#"><img src="images/icon_telephone.png" alt="telephone"></a>
+        </div>
+        <div class="icon_happy_patient">
+            <a href="#"><img src="images/icon_happy_patient.png" alt="happy patient"></a>
+        </div>
+        <div class="icon_patient_review">
+            <a href="#"> <img src="images/icon_patient_review.png" alt="patient review"></a>
+        </div>
     </div>
+
 
 </header>
 
@@ -50,9 +83,8 @@
 </footer>
 
 
-<!--<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>-->
-
 <script src="js/jquery-3.6.4.min.js"></script>
 <script src="js/scripts.js"></script>
+<script src="https://kit.fontawesome.com/d2bd5b6327.js" crossorigin="anonymous"></script>
 </body>
 </html>

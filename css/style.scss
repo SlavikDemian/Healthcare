@@ -7,6 +7,12 @@
 //font-family: 'Ubuntu', sans-serif;
 
 
+@mixin max-screen($res) {
+  @media screen and (max-width: $res) {
+    @content;
+  }
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -21,18 +27,69 @@ header {
   height: 100vh;
   padding-top: 23px;
   position: relative;
+  @include max-screen(1170px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  @include max-screen(375px) {
+    padding-left: 15px;
+    padding-right: inherit;
+  }
   .container {
-    display: flex;
-    justify-content: space-between;
     max-width: 1170px;
     margin: auto;
-    //position: relative;
+    height: 100%;
+    .container_nav {
+      display: flex;
+      justify-content: space-between;
+      .logo {
+        @include max-screen(840px) {
+          height: 80%;
+        }
+        @include max-screen(538px) {
+          height: 65%;
+        }
+      }
+    }
+    .burger-menu_button {
+      display: none;
+      @include max-screen(840px) {
+        display: initial;
+      }
+      @include max-screen(620px) {
+        width: 70px;
+        height: 70px;
+      }
+      @include max-screen(538px) {
+        width: 60px;
+        height: 60px;
+      }
+      @include max-screen(375px) {
+        width: 55px;
+        height: 55px;
+      }
+    }
 
     .burger-menu_nav {
-      all: initial;
-      display: flex;
-      justify-content: end;
-      align-items: center;
+      @include max-screen(840px) {
+        padding-top: 120px;
+        position: fixed;
+        top: 0;
+        z-index: 20;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        height: 100%;
+        background-color: #e6f3fd;
+        overflow-y: auto;
+        right: -100%;
+        -webkit-transition: 0.8s;
+        -moz-transition: 0.8s;
+        -o-transition: 0.8s;
+        transition: 0.8s;
+
+      }
+
       .burger-menu_link {
         all: initial;
         font-family: 'Poppins', sans-serif;
@@ -40,22 +97,52 @@ header {
         font-size: 16px;
         line-height: 24px;
         color: #40A3F8;
-        padding-right: 50px;
+        margin-right: 50px;
+        cursor: pointer;
+        @include max-screen(950px) {
+          margin-right: 30px;
+        }
+
+        &:nth-of-type(1) {
+          @include max-screen(840px) {
+            margin-right: 0;
+            margin-bottom: 20px;
+          }
+        }
+
         &:nth-of-type(2) {
           color: #6E5F5F;
           opacity: 0.3;
+          @include max-screen(840px) {
+            margin-right: 0;
+            margin-bottom: 20px;
+          }
         }
+
         &:nth-of-type(3) {
           color: #6E5F5F;
           mix-blend-mode: normal;
           opacity: 0.3;
+          @include max-screen(840px) {
+            margin-right: 0;
+            margin-bottom: 20px;
+          }
         }
+
         &:nth-of-type(4) {
           color: #262323;
           mix-blend-mode: normal;
           opacity: 0.3;
-          padding-right: 75px;
+          margin-right: 75px;
+          @include max-screen(950px) {
+            margin-right: 50px;
+          }
+          @include max-screen(840px) {
+            margin-right: 0;
+            margin-bottom: 20px;
+          }
         }
+
         &:nth-of-type(5) {
           color: #FFFFFF;
           font-size: 15px;
@@ -63,17 +150,422 @@ header {
           background: #40A3F8;
           border-radius: 5px;
           padding: 13px 28px;
-
+          margin: 0 5px;
         }
       }
+    }
+    .burger-menu_active .burger-menu_nav {
+      right: 0;
+      -webkit-transition: 0.4s;
+      -moz-transition: 0.4s;
+      -o-transition: 0.4s;
+      transition: 0.4s;
+    }
+    .container_box_text {
+      display: flex;
+      flex-direction: column;
+      height: 92%;
+      justify-content: center;
+      width: 50%;
+      @include max-screen(880px) {
+        width: 48%;
+      }
+      @include max-screen(834px) {
+        width: 40%;
+        justify-content: start;
+      }
+      @include max-screen(470px) {
+        justify-content: start;
+      }
+      @include max-screen(375px) {
+        width: 35%;
+      }
+      h1 {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 70px;
+        color: #3E3E3E;
+        padding-bottom: 31px;
+        @include max-screen(840px) {
+          font-size: 40px;
+          line-height: 60px;
+          padding-bottom: 20px;
+        }
+        @include max-screen(820px) {
+          padding-top: 20px;
+        }
+        @include max-screen(793px) {
+          font-size: 35px;
+          line-height: 50px;
+          padding-bottom: 15px;
+        }
+        @include max-screen(538px) {
+          font-size: 30px;
+          line-height: 40px;
+          padding-bottom: 10px;
+        }
+        @include max-screen(420px) {
+          font-size: 25px;
+          line-height: 35px;
+          padding-bottom: 20px;
+          padding-top: inherit;
+        }
+        @include max-screen(375px) {
+          font-size: 21px;
+          line-height: 30px;
+        }
+
+        span {
+          color: #40A3F8;
+        }
+      }
+      p {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 30px;
+        color: rgba(117, 117, 117, 0.46);
+        padding-bottom: 50px;
+        @include max-screen(840px) {
+          font-size: 12px;
+          line-height: 25px;
+          padding-bottom: 20px;
+        }
+        @include max-screen(793px) {
+          line-height: 20px;
+        }
+        @include max-screen(538px) {
+          line-height: 17px;
+        }
+        //@include max-screen(470px) {
+        //  padding-bottom: 100px;
+        //}
+      }
+
+      form {
+        background-color: #FFFFFF;
+        box-shadow: 0px 4px 22px rgba(228, 245, 252, 0.3);
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        padding: 2% 2%;
+        @include max-screen(834px) {
+          flex-direction: column;
+          position: relative;
+        }
+        @include max-screen(470px) {
+          position: absolute;
+          top: 15%;
+          right: 5%;
+        }
+
+        .form_input_name {
+          display: flex;
+          align-items: center;
+          @include max-screen(820px) {
+            padding-bottom: 5px;
+          }
+
+          .input_name {
+            background-color: rgba(245, 246, 250, 0.52);
+            border-radius: 8px;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            //color: rgba(0, 0, 0, 0.3);
+            text-align: left;
+            height: 100%;
+            width: 216px;
+            padding-left: 30px;
+            @include max-screen(1070px) {
+              width: 190px;
+            }
+            @include max-screen(950px) {
+              width: 160px;
+              padding-left: 15px;
+            }
+            @include max-screen(834px) {
+              width: 300px;
+              height: 50px;
+              text-align: center;
+            }
+            @include max-screen(538px) {
+              width: 180px;
+              height: 40px;
+            }
+            @include max-screen(500px) {
+              width: 160px;
+              height: 35px;
+              padding-left: inherit;
+            }
+
+          }
+        }
+        .form_select_geo {
+          display: flex;
+          align-items: center;
+          position: relative;
+          &:before {
+            content: "";
+            background-image: url("/images/location.png");
+            height: 18px;
+            width: 15px;
+            background-size: cover;
+            position: absolute;
+            top: 30%;
+            left: 10%;
+            @include max-screen(950px) {
+              left: 2%;
+            }
+          }
+          .select_geo {
+            background-color: rgba(245, 246, 250, 0.52);
+            border-radius: 8px;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            color: #3D3D3F;
+            height: 100%;
+            width: 203px;
+            text-align: center;
+            @include max-screen(1070px) {
+              width: 185px;
+            }
+            @include max-screen(950px) {
+              width: 160px;
+            }
+            @include max-screen(834px) {
+              width: 300px;
+              height: 50px;
+            }
+            @include max-screen(538px) {
+              width: 180px;
+              height: 40px;
+            }
+            @include max-screen(500px) {
+              width: 160px;
+              height: 35px;
+            }
+          }
+        }
+        button {
+          background-color: #40A3F8;
+          border-radius: 8px;
+          border: none;
+          width: 70px;
+          height: 59px;
+          cursor: pointer;
+          &:hover {
+            transform: scale(0.9);
+            transition: 0.5s;
+          }
+          @include max-screen(840px) {
+            width: 50px;
+            height: 50px
+          }
+          @include max-screen(834px) {
+            position: absolute;
+            left: 0;
+            bottom: -50%;
+          }
+          @include max-screen(538px) {
+            bottom: -55%;
+            width: 42px;
+            height: 42px
+          }
+          @include max-screen(500px) {
+            width: 35px;
+            height: 35px
+          }
+          @include max-screen(470px) {
+            bottom: -40%;
+          }
+          img {
+            @include max-screen(500px) {
+              height: 80%;
+            }
+          }
+        }
+      }
+
     }
   }
   .female-doctor {
     position: absolute;
     bottom: -0.5%;
     right: 7%;
-    img {
-      width: 100vh;
+    @include max-screen(1170px) {
+      right: 2%;
     }
+    @include max-screen(1070px) {
+      right: 3%;
+    }
+    @include max-screen(1000px) {
+      right: 4%;
+    }
+    @include max-screen(720px) {
+      right: 6%;
+    }
+    @include max-screen(538px) {
+      right: 0;
+    }
+    .image_female-doctor {
+      width: 80vh;
+      @include max-screen(1070px) {
+        width: 75vh;
+      }
+      @include max-screen(1000px) {
+        width: 70vh
+      }
+      @include max-screen(834px) {
+         width: 52vh
+       }
+      //@include max-screen(720px) {
+      //  width: 60vh
+      //}
+      @include max-screen(620px) {
+        width: 50vh
+      }
+      @include max-screen(470px) {
+        width: 45vh
+      }
+      @include max-screen(420px) {
+        width: 38vh
+      }
+    }
+    .icon_chat {
+      position: absolute;
+      top: 40%;
+      left: 0%;
+      @include max-screen(1000px) {
+        top: 30%;
+        left: 0;
+      }
+      @include max-screen(750px) {
+        left: 5%;
+      }
+      @include max-screen(375px) {
+        left: 12%;
+        top: -20%;
+      }
+      img {
+        width: 80px;
+        height: 80px;
+        @include max-screen(470px) {
+          width: 65px;
+          height: 65px;
+        }
+      }
+    }
+    .icon_video_chat {
+      position: absolute;
+      top: 7%;
+      left: 90%;
+      @include max-screen(1170px) {
+        left: 80%
+      }
+      @include max-screen(1000px) {
+        top: -10%;
+        left: 80%
+      }
+      @include max-screen(538px) {
+        left: 64%
+      }
+      img {
+        width: 80px;
+        height: 80px;
+        @include max-screen(470px) {
+          width: 65px;
+          height: 65px;
+        }
+      }
+    }
+    .icon_telephone {
+      position: absolute;
+      top: 10%;
+      left: 5%;
+      @include max-screen(1000px) {
+        top: -5%;
+      }
+      @include max-screen(750px) {
+        left: 10%;
+      }
+      @include max-screen(412px) {
+        left: 14%;
+      }
+      @include max-screen(375px) {
+        top: -28%;
+        left: 35%;
+      }
+      img {
+        width: 80px;
+        height: 80px;
+        @include max-screen(470px) {
+          width: 65px;
+          height: 65px;
+        }
+      }
+    }
+    .icon_happy_patient{
+      position: absolute;
+      top: 50%;
+      left: 75%;
+      @include max-screen(1170px) {
+        left: 70%;
+      }
+      @include max-screen(1000px) {
+        left: 62%;
+      }
+      @include max-screen(538px) {
+        left: 53%;
+      }
+      @include max-screen(470px) {
+        left: 47%;
+      }
+      img {
+        width: 162px;
+        height: 112px;
+        @include max-screen(620px) {
+          width: 140px;
+          height: 90px;
+        }
+        @include max-screen(470px) {
+          width: 100px;
+          height: 70px;
+        }
+      }
+    }
+    .icon_patient_review {
+      position: absolute;
+      top: 75%;
+      left: 15%;
+      @include max-screen(470px) {
+        left: -15%;
+      }
+      img {
+        width: 212px;
+        height: 85px;
+        @include max-screen(620px) {
+          width: 180px;
+          height: 75px;
+        }
+        @include max-screen(470px) {
+          width: 160px;
+          height: 65px;
+        }
+      }
+    }
+  }
+}
+.burger-menu_active .burger-menu_overlay {
+  @include max-screen(840px) {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+
   }
 }
