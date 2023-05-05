@@ -38,13 +38,9 @@ $(document).ready(function(){
             0:{
                 items:1
             },
-            800:{
+            750:{
                 items:3
             },
-
-            1000:{
-                items:5
-            }
         }
     });
     $('.slide-two').owlCarousel({
@@ -52,20 +48,16 @@ $(document).ready(function(){
         margin:20,
         nav:true,
         autoplay: true,
-        autoplayTimeout: 1000,
+        autoplayTimeout: 7000,
         navText: [ '', '' ],
 
         responsive:{
             0:{
                 items:1
             },
-            800:{
+            750:{
                 items:3
             },
-
-            1000:{
-                items:7
-            }
         }
     });
 

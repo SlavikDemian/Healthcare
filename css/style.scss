@@ -917,7 +917,126 @@ header {
 
 // our service
 
+.our_service {
+  padding-top: 143px;
+  padding-bottom: 121px;
 
+  .container {
+    max-width: 1180px;
+    margin: auto;
+    @include max-screen(850px) {
+      padding: 0 15px;
+    }
+    h2 {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      font-size: 42px;
+      line-height: 49px;
+      letter-spacing: 0.02em;
+      color: #3D3D3F;
+      text-align: center;
+      padding-bottom: 24px;
+      @include max-screen(650px) {
+        font-size: 42px;
+        line-height: 49px;
+      }
+      @include max-screen(500px) {
+        font-size: 38px;
+        line-height: 45px;
+      }
+      @include max-screen(430px) {
+        font-size: 35px;
+        line-height: 40px;
+      }
+      @include max-screen(360px) {
+        font-size: 32px;
+        line-height: 36px;
+      }
+    }
+
+    p {
+      font-family: 'Roboto', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 30px;
+      text-align: center;
+      letter-spacing: 0.02em;
+      color: rgba(61, 61, 63, 0.7);
+      @include max-screen(650px) {
+        font-size: 17px;
+        line-height: 28px;
+      }
+      @include max-screen(500px) {
+        font-size: 16px;
+        line-height: 26px;
+      }
+      @include max-screen(430px) {
+        font-size: 15px;
+        line-height: 24px;
+      }
+      @include max-screen(360px) {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+  }
+}
+
+.slide-one {
+  @include max-screen(749px) {
+    width: 80%;
+    margin: auto;
+  }
+  .owl-item {
+    img {
+      @include max-screen(749px) {
+        width: 80%;
+        margin: auto;
+      }
+      @include max-screen(500px) {
+        width: 100%;
+      }
+    }
+  }
+  .owl-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include max-screen(380px) {
+      flex-wrap: wrap;
+    }
+    .owl-dot {
+      span {
+        background-color: #DBE8EE;
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+        display: inline-block;
+        margin: 0 5px;
+        @include max-screen(380px) {
+          width: 15px;
+          height: 15px;
+          margin: 0 4px;
+        }
+      }
+    }
+    .owl-dot.active {
+      span {
+        background-color: #40A3F8;
+        border-radius: 6px;
+        width: 60px;
+        height: 15px;
+        display: inline-block;
+        margin: 0 5px;
+        @include max-screen(380px) {
+          width: 45px;
+          margin: 0 4px;
+        }
+      }
+    }
+  }
+}
 
 
 
@@ -949,3 +1068,141 @@ header {
 
 
 // look our clients
+
+.look_our_clients {
+  .container {
+    max-width: 1180px;
+    margin: auto;
+    @include max-screen(850px) {
+      padding: 0 15px;
+    }
+    h3 {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      font-size: 42px;
+      line-height: 49px;
+      letter-spacing: 0.02em;
+      color: #3D3D3F;
+      text-align: center;
+      padding-bottom: 93px;
+      @include max-screen(749px) {
+        font-size: 38px;
+        line-height: 44px;
+      }
+      @include max-screen(500px) {
+        font-size: 35px;
+        line-height: 40px;
+      }
+      @include max-screen(430px) {
+        font-size: 32px;
+        line-height: 35px;
+      }
+      @include max-screen(360px) {
+        font-size: 28px;
+        line-height: 30px;
+      }
+    }
+    .slide-two {
+      @include max-screen(1400px) {
+        width: 90%;
+        margin: auto;
+      }
+      @include max-screen(1280px) {
+        width: 80%;
+        margin: auto;
+      }
+      @include max-screen(749px) {
+        width: 70%;
+        margin: auto;
+      }
+      .owl-item {
+        img {
+          @include max-screen(749px) {
+            width: 80%;
+            margin: auto;
+          }
+          @include max-screen(500px) {
+            width: 90%;
+          }
+        }
+      }
+      .owl-nav {
+        .owl-prev {
+          width: 33px;
+          height: 33px;
+          background-color: rgba(111, 188, 255, 0.1005);
+          border-radius: 5px;
+          box-shadow: 0 4px 40px rgba(0, 0, 0, 0.07);
+          position: absolute;
+          top: 40%;
+          left: -10%;
+          @include max-screen(1280px) {
+            left: -8%;
+          }
+          @include max-screen(380px) {
+            left: -15%;
+          }
+          &::before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-top: 3px solid #40A3F8;
+            border-right: 3px solid #40A3F8;
+            //margin-right: 10px;
+            display: inline-block;
+            transform: rotate(-135deg);
+            position: absolute;
+            left: 35%;
+            top: 30%;
+          }
+          &:hover {
+            background-color: #40A3F8;
+            &::before{
+              content: "";
+                border-top: 3px solid #FFFFFF;
+                border-right: 3px solid #FFFFFF;
+            }
+          }
+        }
+        .owl-next {
+          width: 33px;
+          height: 33px;
+          background-color: rgba(111, 188, 255, 0.1005);
+          border-radius: 5px;
+          box-shadow: 0 4px 40px rgba(0, 0, 0, 0.07);
+          position: absolute;
+          top: 40%;
+          right: -10%;
+          @include max-screen(1280px) {
+            right: -8%;
+          }
+          @include max-screen(380px) {
+            right: -15%;
+          }
+          &::before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-top: 3px solid #40A3F8;
+            border-right: 3px solid #40A3F8;
+            //margin-right: 10px;
+            display: inline-block;
+            transform: rotate(45deg);
+            position: absolute;
+            right: 35%;
+            top: 30%;
+          }
+          &:hover {
+            background-color: #40A3F8;
+            &::before{
+              content: "";
+              border-top: 3px solid #FFFFFF;
+              border-right: 3px solid #FFFFFF;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
