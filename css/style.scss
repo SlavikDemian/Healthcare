@@ -1047,7 +1047,9 @@ header {
 
 // meet our certified
 
+.meet_our_certified {
 
+}
 
 
 
@@ -1060,7 +1062,9 @@ header {
 
 // mobile apps
 
+.mobile_apps {
 
+}
 
 
 
@@ -1206,3 +1210,128 @@ header {
   }
 }
 
+// it’s  time  change
+
+.it’s_time_change {
+  padding-top: 81px;
+  padding-bottom: 68px;
+  .container {
+    max-width: 1287px;
+    margin: auto;
+    .background_box {
+      background-color: #40A3F8;
+      border-radius: 12px;
+      max-width: 1170px;
+      margin: auto;
+      height: 341px;
+      background-image: url("../images/background_box_img.png");
+      background-size: cover;
+      position: relative;
+      display: flex;
+      align-items: center;
+      @include max-screen(800px) {
+        align-items: start;
+        padding-top: 20px;
+      }
+      .background_box_text_container {
+        padding-left: 118px;
+        @include max-screen(1000px) {
+          padding-left: 50px;
+        }
+        @include max-screen(900px) {
+          padding-left: 30px;
+        }
+        @include max-screen(360px) {
+          padding-left: 15px;
+        }
+        h4 {
+          font-family: 'Roboto', sans-serif;
+          font-weight: 700;
+          font-size: 40px;
+          line-height: 47px;
+          text-transform: capitalize;
+          color: #FFFFFF;
+          padding-bottom: 37px;
+          @include max-screen(900px) {
+            font-size: 36px;
+            line-height: 40px;
+          }
+          @include max-screen(650px) {
+            font-size: 32px;
+            line-height: 36px;
+          }
+          @include max-screen(530px) {
+            font-size: 28px;
+            line-height: 32px;
+            padding-bottom: 190px;
+          }
+          @include max-screen(470px) {
+            font-size: 28px;
+            line-height: 32px;
+            width: 40%;
+            padding-bottom: 115px;
+          }
+          @include max-screen(428px) {
+            font-size: 25px;
+            line-height: 29px;
+            width: 50%;
+            padding-bottom: 160px;
+          }
+        }
+        a {
+          font-family: 'Roboto', sans-serif;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 21px;
+          font-feature-settings: 'cpsp' on;
+          color: #40A3F8;
+          text-decoration: none;
+          background-color: #FFFFFF;
+          box-shadow: 0 4px 22px rgba(0, 0, 0, 0.05);
+          border-radius: 5px;
+          padding: 15px 17px;
+          &:hover {
+            transform: scale(4.3);
+            transition: 0.3s;
+          }
+          @include max-screen(900px) {
+            font-size: 16px;
+          }
+          @include max-screen(650px) {
+            font-size: 13px;
+          }
+          @include max-screen(530px) {
+            font-size: 11px;
+          }
+          @include max-screen(470px) {
+            font-size: 9px;
+          }
+        }
+      }
+      img {
+        position: absolute;
+        right: 5%;
+        bottom: 0;
+        @include max-screen(1000px) {
+          right: 2%;
+        }
+        @include max-screen(800px) {
+          right: 0;
+          height: 120%;
+        }
+        @include max-screen(650px) {
+          height: 100%;
+        }
+        @include max-screen(428px) {
+          height: 90%;
+        }
+        @include max-screen(360px) {
+          height: 85%;
+        }
+        @include max-screen(340px) {
+          height: 80%;
+        }
+      }
+    }
+  }
+}
