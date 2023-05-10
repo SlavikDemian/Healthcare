@@ -352,7 +352,7 @@ header .container .container_box_text form .form_select_geo {
 }
 header .container .container_box_text form .form_select_geo:before {
   content: "";
-  background-image: url("/images/location.png");
+  background-image: url("/images/location_2.png");
   height: 18px;
   width: 15px;
   background-size: cover;
