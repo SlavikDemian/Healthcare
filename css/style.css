@@ -383,7 +383,7 @@ header .container .burger-menu_active .burger-menu_nav {
 }
 .main_banner .container .container_box_text form .form_select_geo:before {
   content: "";
-  background-image: url("/images/location_2.png");
+  background-image: url("/images/location_svg_4.svg");
   height: 18px;
   width: 15px;
   background-size: cover;
