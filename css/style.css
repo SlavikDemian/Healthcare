@@ -10,9 +10,8 @@
 }
 
 header {
-  background-image: url("../images/back_img.jpg");
+  background-image: url("../images/back_img_1.jpg");
   background-size: cover;
-  height: 100vh;
   padding-top: 23px;
   position: relative;
 }
@@ -167,7 +166,39 @@ header .container .burger-menu_active .burger-menu_nav {
   -o-transition: 0.4s;
   transition: 0.4s;
 }
-header .container .container_box_text {
+
+@media screen and (max-width: 840px) {
+  .burger-menu_active .burger-menu_overlay {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.main_banner {
+  background-image: url("../images/back_img_1.jpg");
+  background-size: cover;
+  height: 100vh;
+  padding-top: 23px;
+  position: relative;
+}
+@media screen and (max-width: 1170px) {
+  .main_banner {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .main_banner {
+    padding-left: 15px;
+    padding-right: inherit;
+  }
+}
+.main_banner .container {
+  max-width: 1170px;
+  margin: auto;
+  height: 100%;
+}
+.main_banner .container .container_box_text {
   display: flex;
   flex-direction: column;
   height: 92%;
@@ -175,27 +206,27 @@ header .container .container_box_text {
   width: 50%;
 }
 @media screen and (max-width: 880px) {
-  header .container .container_box_text {
+  .main_banner .container .container_box_text {
     width: 48%;
   }
 }
 @media screen and (max-width: 834px) {
-  header .container .container_box_text {
+  .main_banner .container .container_box_text {
     width: 40%;
     justify-content: start;
   }
 }
 @media screen and (max-width: 470px) {
-  header .container .container_box_text {
+  .main_banner .container .container_box_text {
     justify-content: start;
   }
 }
 @media screen and (max-width: 375px) {
-  header .container .container_box_text {
+  .main_banner .container .container_box_text {
     width: 35%;
   }
 }
-header .container .container_box_text h1 {
+.main_banner .container .container_box_text h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 48px;
@@ -204,33 +235,33 @@ header .container .container_box_text h1 {
   padding-bottom: 31px;
 }
 @media screen and (max-width: 840px) {
-  header .container .container_box_text h1 {
+  .main_banner .container .container_box_text h1 {
     font-size: 40px;
     line-height: 60px;
     padding-bottom: 20px;
   }
 }
 @media screen and (max-width: 820px) {
-  header .container .container_box_text h1 {
+  .main_banner .container .container_box_text h1 {
     padding-top: 20px;
   }
 }
 @media screen and (max-width: 793px) {
-  header .container .container_box_text h1 {
+  .main_banner .container .container_box_text h1 {
     font-size: 35px;
     line-height: 50px;
     padding-bottom: 15px;
   }
 }
 @media screen and (max-width: 538px) {
-  header .container .container_box_text h1 {
+  .main_banner .container .container_box_text h1 {
     font-size: 30px;
     line-height: 40px;
     padding-bottom: 10px;
   }
 }
 @media screen and (max-width: 420px) {
-  header .container .container_box_text h1 {
+  .main_banner .container .container_box_text h1 {
     font-size: 25px;
     line-height: 35px;
     padding-bottom: 20px;
@@ -238,15 +269,15 @@ header .container .container_box_text h1 {
   }
 }
 @media screen and (max-width: 375px) {
-  header .container .container_box_text h1 {
+  .main_banner .container .container_box_text h1 {
     font-size: 21px;
     line-height: 30px;
   }
 }
-header .container .container_box_text h1 span {
+.main_banner .container .container_box_text h1 span {
   color: #40A3F8;
 }
-header .container .container_box_text p {
+.main_banner .container .container_box_text p {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -255,23 +286,23 @@ header .container .container_box_text p {
   padding-bottom: 50px;
 }
 @media screen and (max-width: 840px) {
-  header .container .container_box_text p {
+  .main_banner .container .container_box_text p {
     font-size: 12px;
     line-height: 25px;
     padding-bottom: 20px;
   }
 }
 @media screen and (max-width: 793px) {
-  header .container .container_box_text p {
+  .main_banner .container .container_box_text p {
     line-height: 20px;
   }
 }
 @media screen and (max-width: 538px) {
-  header .container .container_box_text p {
+  .main_banner .container .container_box_text p {
     line-height: 17px;
   }
 }
-header .container .container_box_text form {
+.main_banner .container .container_box_text form {
   background-color: #FFFFFF;
   box-shadow: 0 4px 22px rgba(228, 245, 252, 0.3);
   border-radius: 8px;
@@ -280,28 +311,28 @@ header .container .container_box_text form {
   padding: 2% 2%;
 }
 @media screen and (max-width: 834px) {
-  header .container .container_box_text form {
+  .main_banner .container .container_box_text form {
     flex-direction: column;
     position: relative;
   }
 }
 @media screen and (max-width: 470px) {
-  header .container .container_box_text form {
+  .main_banner .container .container_box_text form {
     position: absolute;
     top: 15%;
     right: 5%;
   }
 }
-header .container .container_box_text form .form_input_name {
+.main_banner .container .container_box_text form .form_input_name {
   display: flex;
   align-items: center;
 }
 @media screen and (max-width: 820px) {
-  header .container .container_box_text form .form_input_name {
+  .main_banner .container .container_box_text form .form_input_name {
     padding-bottom: 5px;
   }
 }
-header .container .container_box_text form .form_input_name .input_name {
+.main_banner .container .container_box_text form .form_input_name .input_name {
   background-color: rgba(245, 246, 250, 0.52);
   border-radius: 8px;
   border: none;
@@ -315,42 +346,42 @@ header .container .container_box_text form .form_input_name .input_name {
   padding-left: 30px;
 }
 @media screen and (max-width: 1070px) {
-  header .container .container_box_text form .form_input_name .input_name {
+  .main_banner .container .container_box_text form .form_input_name .input_name {
     width: 190px;
   }
 }
 @media screen and (max-width: 950px) {
-  header .container .container_box_text form .form_input_name .input_name {
+  .main_banner .container .container_box_text form .form_input_name .input_name {
     width: 160px;
     padding-left: 15px;
   }
 }
 @media screen and (max-width: 834px) {
-  header .container .container_box_text form .form_input_name .input_name {
+  .main_banner .container .container_box_text form .form_input_name .input_name {
     width: 300px;
     height: 50px;
     text-align: center;
   }
 }
 @media screen and (max-width: 538px) {
-  header .container .container_box_text form .form_input_name .input_name {
+  .main_banner .container .container_box_text form .form_input_name .input_name {
     width: 180px;
     height: 40px;
   }
 }
 @media screen and (max-width: 500px) {
-  header .container .container_box_text form .form_input_name .input_name {
+  .main_banner .container .container_box_text form .form_input_name .input_name {
     width: 160px;
     height: 35px;
     padding-left: inherit;
   }
 }
-header .container .container_box_text form .form_select_geo {
+.main_banner .container .container_box_text form .form_select_geo {
   display: flex;
   align-items: center;
   position: relative;
 }
-header .container .container_box_text form .form_select_geo:before {
+.main_banner .container .container_box_text form .form_select_geo:before {
   content: "";
   background-image: url("/images/location_2.png");
   height: 18px;
@@ -361,11 +392,11 @@ header .container .container_box_text form .form_select_geo:before {
   left: 10%;
 }
 @media screen and (max-width: 950px) {
-  header .container .container_box_text form .form_select_geo:before {
+  .main_banner .container .container_box_text form .form_select_geo:before {
     left: 2%;
   }
 }
-header .container .container_box_text form .form_select_geo .select_geo {
+.main_banner .container .container_box_text form .form_select_geo .select_geo {
   background-color: rgba(245, 246, 250, 0.52);
   border-radius: 8px;
   border: none;
@@ -379,34 +410,34 @@ header .container .container_box_text form .form_select_geo .select_geo {
   text-align: center;
 }
 @media screen and (max-width: 1070px) {
-  header .container .container_box_text form .form_select_geo .select_geo {
+  .main_banner .container .container_box_text form .form_select_geo .select_geo {
     width: 185px;
   }
 }
 @media screen and (max-width: 950px) {
-  header .container .container_box_text form .form_select_geo .select_geo {
+  .main_banner .container .container_box_text form .form_select_geo .select_geo {
     width: 160px;
   }
 }
 @media screen and (max-width: 834px) {
-  header .container .container_box_text form .form_select_geo .select_geo {
+  .main_banner .container .container_box_text form .form_select_geo .select_geo {
     width: 300px;
     height: 50px;
   }
 }
 @media screen and (max-width: 538px) {
-  header .container .container_box_text form .form_select_geo .select_geo {
+  .main_banner .container .container_box_text form .form_select_geo .select_geo {
     width: 180px;
     height: 40px;
   }
 }
 @media screen and (max-width: 500px) {
-  header .container .container_box_text form .form_select_geo .select_geo {
+  .main_banner .container .container_box_text form .form_select_geo .select_geo {
     width: 160px;
     height: 35px;
   }
 }
-header .container .container_box_text form button {
+.main_banner .container .container_box_text form button {
   background-color: #40A3F8;
   border-radius: 8px;
   border: none;
@@ -414,280 +445,273 @@ header .container .container_box_text form button {
   height: 59px;
   cursor: pointer;
 }
-header .container .container_box_text form button:hover {
+.main_banner .container .container_box_text form button:hover {
   transform: scale(0.9);
   transition: 0.5s;
 }
 @media screen and (max-width: 840px) {
-  header .container .container_box_text form button {
+  .main_banner .container .container_box_text form button {
     width: 50px;
     height: 50px;
   }
 }
 @media screen and (max-width: 834px) {
-  header .container .container_box_text form button {
+  .main_banner .container .container_box_text form button {
     position: absolute;
     left: 0;
     bottom: -50%;
   }
 }
 @media screen and (max-width: 538px) {
-  header .container .container_box_text form button {
+  .main_banner .container .container_box_text form button {
     bottom: -55%;
     width: 42px;
     height: 42px;
   }
 }
 @media screen and (max-width: 500px) {
-  header .container .container_box_text form button {
+  .main_banner .container .container_box_text form button {
     width: 35px;
     height: 35px;
   }
 }
 @media screen and (max-width: 470px) {
-  header .container .container_box_text form button {
+  .main_banner .container .container_box_text form button {
     bottom: -40%;
   }
 }
 @media screen and (max-width: 500px) {
-  header .container .container_box_text form button img {
+  .main_banner .container .container_box_text form button img {
     height: 80%;
   }
 }
-header .female-doctor {
+.main_banner .female-doctor {
   position: absolute;
   bottom: -0.5%;
   right: 7%;
 }
 @media screen and (max-width: 1170px) {
-  header .female-doctor {
+  .main_banner .female-doctor {
     right: 2%;
   }
 }
 @media screen and (max-width: 1070px) {
-  header .female-doctor {
+  .main_banner .female-doctor {
     right: 3%;
   }
 }
 @media screen and (max-width: 1000px) {
-  header .female-doctor {
+  .main_banner .female-doctor {
     right: 4%;
   }
 }
 @media screen and (max-width: 720px) {
-  header .female-doctor {
+  .main_banner .female-doctor {
     right: 6%;
   }
 }
 @media screen and (max-width: 538px) {
-  header .female-doctor {
+  .main_banner .female-doctor {
     right: 0;
   }
 }
-header .female-doctor .image_female-doctor {
+.main_banner .female-doctor .image_female-doctor {
   width: 80vh;
 }
 @media screen and (max-width: 1070px) {
-  header .female-doctor .image_female-doctor {
+  .main_banner .female-doctor .image_female-doctor {
     width: 75vh;
   }
 }
 @media screen and (max-width: 1000px) {
-  header .female-doctor .image_female-doctor {
+  .main_banner .female-doctor .image_female-doctor {
     width: 70vh;
   }
 }
 @media screen and (max-width: 834px) {
-  header .female-doctor .image_female-doctor {
+  .main_banner .female-doctor .image_female-doctor {
     width: 52vh;
   }
 }
 @media screen and (max-width: 620px) {
-  header .female-doctor .image_female-doctor {
+  .main_banner .female-doctor .image_female-doctor {
     width: 50vh;
   }
 }
 @media screen and (max-width: 470px) {
-  header .female-doctor .image_female-doctor {
+  .main_banner .female-doctor .image_female-doctor {
     width: 45vh;
   }
 }
 @media screen and (max-width: 420px) {
-  header .female-doctor .image_female-doctor {
+  .main_banner .female-doctor .image_female-doctor {
     width: 38vh;
   }
 }
-header .female-doctor .icon_chat {
+.main_banner .female-doctor .icon_chat {
   position: absolute;
   top: 40%;
   left: 0;
 }
 @media screen and (max-width: 1000px) {
-  header .female-doctor .icon_chat {
+  .main_banner .female-doctor .icon_chat {
     top: 30%;
     left: 0;
   }
 }
 @media screen and (max-width: 750px) {
-  header .female-doctor .icon_chat {
+  .main_banner .female-doctor .icon_chat {
     left: 5%;
   }
 }
 @media screen and (max-width: 375px) {
-  header .female-doctor .icon_chat {
+  .main_banner .female-doctor .icon_chat {
     left: 12%;
     top: -20%;
   }
 }
-header .female-doctor .icon_chat img {
+.main_banner .female-doctor .icon_chat img {
   width: 80px;
   height: 80px;
 }
 @media screen and (max-width: 470px) {
-  header .female-doctor .icon_chat img {
+  .main_banner .female-doctor .icon_chat img {
     width: 65px;
     height: 65px;
   }
 }
-header .female-doctor .icon_video_chat {
+.main_banner .female-doctor .icon_video_chat {
   position: absolute;
   top: 7%;
   left: 90%;
 }
 @media screen and (max-width: 1170px) {
-  header .female-doctor .icon_video_chat {
+  .main_banner .female-doctor .icon_video_chat {
     left: 80%;
   }
 }
 @media screen and (max-width: 1000px) {
-  header .female-doctor .icon_video_chat {
+  .main_banner .female-doctor .icon_video_chat {
     top: -10%;
     left: 80%;
   }
 }
 @media screen and (max-width: 538px) {
-  header .female-doctor .icon_video_chat {
+  .main_banner .female-doctor .icon_video_chat {
     left: 64%;
   }
 }
-header .female-doctor .icon_video_chat img {
+.main_banner .female-doctor .icon_video_chat img {
   width: 80px;
   height: 80px;
 }
 @media screen and (max-width: 470px) {
-  header .female-doctor .icon_video_chat img {
+  .main_banner .female-doctor .icon_video_chat img {
     width: 65px;
     height: 65px;
   }
 }
-header .female-doctor .icon_telephone {
+.main_banner .female-doctor .icon_telephone {
   position: absolute;
   top: 10%;
   left: 5%;
 }
 @media screen and (max-width: 1000px) {
-  header .female-doctor .icon_telephone {
+  .main_banner .female-doctor .icon_telephone {
     top: -5%;
   }
 }
 @media screen and (max-width: 750px) {
-  header .female-doctor .icon_telephone {
+  .main_banner .female-doctor .icon_telephone {
     left: 10%;
   }
 }
 @media screen and (max-width: 412px) {
-  header .female-doctor .icon_telephone {
+  .main_banner .female-doctor .icon_telephone {
     left: 14%;
   }
 }
 @media screen and (max-width: 375px) {
-  header .female-doctor .icon_telephone {
+  .main_banner .female-doctor .icon_telephone {
     top: -28%;
     left: 35%;
   }
 }
-header .female-doctor .icon_telephone img {
+.main_banner .female-doctor .icon_telephone img {
   width: 80px;
   height: 80px;
 }
 @media screen and (max-width: 470px) {
-  header .female-doctor .icon_telephone img {
+  .main_banner .female-doctor .icon_telephone img {
     width: 65px;
     height: 65px;
   }
 }
-header .female-doctor .icon_happy_patient {
+.main_banner .female-doctor .icon_happy_patient {
   position: absolute;
   top: 50%;
   left: 75%;
 }
 @media screen and (max-width: 1170px) {
-  header .female-doctor .icon_happy_patient {
+  .main_banner .female-doctor .icon_happy_patient {
     left: 70%;
   }
 }
 @media screen and (max-width: 1000px) {
-  header .female-doctor .icon_happy_patient {
+  .main_banner .female-doctor .icon_happy_patient {
     left: 62%;
   }
 }
 @media screen and (max-width: 538px) {
-  header .female-doctor .icon_happy_patient {
+  .main_banner .female-doctor .icon_happy_patient {
     left: 53%;
   }
 }
 @media screen and (max-width: 470px) {
-  header .female-doctor .icon_happy_patient {
+  .main_banner .female-doctor .icon_happy_patient {
     left: 47%;
   }
 }
-header .female-doctor .icon_happy_patient img {
+.main_banner .female-doctor .icon_happy_patient img {
   width: 162px;
   height: 112px;
 }
 @media screen and (max-width: 620px) {
-  header .female-doctor .icon_happy_patient img {
+  .main_banner .female-doctor .icon_happy_patient img {
     width: 140px;
     height: 90px;
   }
 }
 @media screen and (max-width: 470px) {
-  header .female-doctor .icon_happy_patient img {
+  .main_banner .female-doctor .icon_happy_patient img {
     width: 100px;
     height: 70px;
   }
 }
-header .female-doctor .icon_patient_review {
+.main_banner .female-doctor .icon_patient_review {
   position: absolute;
   top: 75%;
   left: 15%;
 }
 @media screen and (max-width: 470px) {
-  header .female-doctor .icon_patient_review {
+  .main_banner .female-doctor .icon_patient_review {
     left: -15%;
   }
 }
-header .female-doctor .icon_patient_review img {
+.main_banner .female-doctor .icon_patient_review img {
   width: 212px;
   height: 85px;
 }
 @media screen and (max-width: 620px) {
-  header .female-doctor .icon_patient_review img {
+  .main_banner .female-doctor .icon_patient_review img {
     width: 180px;
     height: 75px;
   }
 }
 @media screen and (max-width: 470px) {
-  header .female-doctor .icon_patient_review img {
+  .main_banner .female-doctor .icon_patient_review img {
     width: 160px;
     height: 65px;
-  }
-}
-
-@media screen and (max-width: 840px) {
-  .burger-menu_active .burger-menu_overlay {
-    display: block;
-    background-color: rgba(0, 0, 0, 0.5);
   }
 }
 
