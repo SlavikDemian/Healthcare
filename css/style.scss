@@ -190,6 +190,10 @@ header {
           @include max-screen(950px) {
             margin-right: 30px;
           }
+            &:hover {
+              color: #40A3F8;
+              opacity: 1;
+            }
 
         }
       }
@@ -387,7 +391,7 @@ header {
 
           &:before {
             content: "";
-            background-image: url("/images/location_svg_4.svg");
+            background-image: url("../images/location_svg_4.svg");
             height: 18px;
             width: 15px;
             background-size: cover;
@@ -615,19 +619,19 @@ header {
         left: 53%;
       }
       @include max-screen(470px) {
-        left: 47%;
+        left: 52%;
       }
 
       img {
-        width: 162px;
-        height: 112px;
+        width: 130px;
+        height: 90px;
         @include max-screen(620px) {
-          width: 140px;
-          height: 90px;
+          width: 120px;
+          height: 85px;
         }
         @include max-screen(470px) {
-          width: 100px;
-          height: 70px;
+          width: 90px;
+          height: 60px;
         }
       }
     }
@@ -756,7 +760,7 @@ header {
           flex-direction: column;
           align-items: center;
           text-decoration: none;
-          h4 {
+          .span_main {
             font-family: 'Roboto', sans-serif;
             font-weight: 500;
             font-size: 20px;
@@ -773,7 +777,7 @@ header {
               padding-bottom: 0;
             }
           }
-          p {
+          .span_secondary {
             font-family: 'Roboto', sans-serif;
             font-weight: 400;
             font-size: 12px;
@@ -851,7 +855,7 @@ header {
         height: 50vh;
       }
       @include max-screen(428px) {
-        height: 40vh;
+        height: 36vh;
       }
     }
     .box_text {

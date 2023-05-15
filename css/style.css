@@ -198,6 +198,10 @@ header .container .burger-menu_nav ul li .burger-menu_link {
     margin-right: 30px;
   }
 }
+header .container .burger-menu_nav ul li .burger-menu_link:hover {
+  color: #40A3F8;
+  opacity: 1;
+}
 header .container .burger-menu_active .burger-menu_nav {
   right: 0;
   -webkit-transition: 0.4s;
@@ -422,7 +426,7 @@ header .container .burger-menu_active .burger-menu_nav {
 }
 .main_banner .container .container_box_text form .form_select_geo:before {
   content: "";
-  background-image: url("/images/location_svg_4.svg");
+  background-image: url("../images/location_svg_4.svg");
   height: 18px;
   width: 15px;
   background-size: cover;
@@ -708,23 +712,23 @@ header .container .burger-menu_active .burger-menu_nav {
 }
 @media screen and (max-width: 470px) {
   .main_banner .female-doctor .icon_happy_patient {
-    left: 47%;
+    left: 52%;
   }
 }
 .main_banner .female-doctor .icon_happy_patient img {
-  width: 162px;
-  height: 112px;
+  width: 130px;
+  height: 90px;
 }
 @media screen and (max-width: 620px) {
   .main_banner .female-doctor .icon_happy_patient img {
-    width: 140px;
-    height: 90px;
+    width: 120px;
+    height: 85px;
   }
 }
 @media screen and (max-width: 470px) {
   .main_banner .female-doctor .icon_happy_patient img {
-    width: 100px;
-    height: 70px;
+    width: 90px;
+    height: 60px;
   }
 }
 .main_banner .female-doctor .icon_patient_review {
@@ -873,7 +877,7 @@ header .container .burger-menu_active .burger-menu_nav {
   align-items: center;
   text-decoration: none;
 }
-.three_easy_steps .container .box_content .content a h4 {
+.three_easy_steps .container .box_content .content a .span_main {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 20px;
@@ -884,17 +888,17 @@ header .container .burger-menu_active .burger-menu_nav {
   padding-top: 26px;
 }
 @media screen and (max-width: 600px) {
-  .three_easy_steps .container .box_content .content a h4 {
+  .three_easy_steps .container .box_content .content a .span_main {
     font-size: 18px;
     line-height: 30px;
   }
 }
 @media screen and (max-width: 428px) {
-  .three_easy_steps .container .box_content .content a h4 {
+  .three_easy_steps .container .box_content .content a .span_main {
     padding-bottom: 0;
   }
 }
-.three_easy_steps .container .box_content .content a p {
+.three_easy_steps .container .box_content .content a .span_secondary {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 12px;
@@ -905,13 +909,13 @@ header .container .burger-menu_active .burger-menu_nav {
   margin: auto;
 }
 @media screen and (max-width: 600px) {
-  .three_easy_steps .container .box_content .content a p {
+  .three_easy_steps .container .box_content .content a .span_secondary {
     font-size: 10px;
     line-height: 18px;
   }
 }
 @media screen and (max-width: 428px) {
-  .three_easy_steps .container .box_content .content a p {
+  .three_easy_steps .container .box_content .content a .span_secondary {
     padding-bottom: 50px;
   }
 }
@@ -988,7 +992,7 @@ header .container .burger-menu_active .burger-menu_nav {
 }
 @media screen and (max-width: 428px) {
   .quality_doctors .container img {
-    height: 40vh;
+    height: 36vh;
   }
 }
 .quality_doctors .container .box_text {
